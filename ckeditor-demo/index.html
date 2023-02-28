@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CKEditor 5 – Classic editor</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
+  </head>
+  <body>
+    <h1>Classic editor</h1>
+    <div id="editor">
+      <p id="p">This is some sample content.</p>
+    </div>
+    <button id="button">Hi</button>
+    <script>
+      ClassicEditor.create(document.querySelector('#editor')).catch((error) => {
+        console.error(error);
+      });
+
+      const editor = document.getElementById('editor');
+      const p = document.getElementById('p');
+      const button = document.getElementById('button');
+
+      button.addEventListener('click', (event) => {
+        console.log(p);
+      });
+    </script>
+  </body>
+</html>
